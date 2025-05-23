@@ -4,7 +4,7 @@ A robust and scalable backend API for an e-commerce platform, built with **Node.
 
 ## 🔧 Tech Stack
 
-. **Node.js** & **Express.js** – Server-side runtime and framework
+- **Node.js** & **Express.js** – Server-side runtime and framework
 
 - **MongoDB** & **Mongoose** – NoSQL database and ODM
 
@@ -30,10 +30,10 @@ A robust and scalable backend API for an e-commerce platform, built with **Node.
 
 ## 📁 Project Structure
 .
-├── DB/ # DB connection and seeders
-├── config/ # JWT & environment config
-├── src/ # Models, Routes, Controllers
-├── app.js # Express app entry point
+├── DB/              # DB connection and seeders
+├── config/          # JWT & environment config
+├── src/             # Models, Routes, Controllers
+├── app.js           # Express app entry point
 └── package.json
 
 
