@@ -79,7 +79,9 @@ Successful Response (201 Created):
 
 
 ```
-https://graduation-space-584306.postman.co/workspace/My-Workspace~d8e95f0f-1d84-4459-8a9c-dd43a2344723/request/21090382-10a25b95-32be-4382-a34a-b8f7bdc6111d?action=share&creator=21090382&ctx=documentation
+
+[📬 Click here to open the Postman collection]([https://www.postman.com/your-link-here](https://graduation-space-584306.postman.co/workspace/My-Workspace~d8e95f0f-1d84-4459-8a9c-dd43a2344723/request/21090382-10a25b95-32be-4382-a34a-b8f7bdc6111d?action=share&creator=21090382&ctx=documentation))
+
 
 2. User Login
 Endpoint: POST /api/auth/login
@@ -188,6 +190,16 @@ Add Swagger API docs
 | POST   | /api/auth/login    | Login user       |
 | ...    | ...                | ...              |
 
+
+
+
+### 🔗 Postman Collection
+
+You can test all API endpoints using the following Postman collection:
+
+[📬 Click here to open the Postman collection](https://www.postman.com/your-link-here)
+
+> Make sure to set the `Authorization` header (Bearer token) after logging in.
 
 Deploy on Render / Vercel
 
