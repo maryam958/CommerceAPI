@@ -53,7 +53,7 @@ export const signUp = asyncHandler(async (req, res, next) => {
     let emailResult = await sendEmail(email, "Confirm to Register", message);
     if (emailResult.accepted.length) {
       let savedUser = await addUser.save();
-      res.status(201).json({ message: "Added Successfully", savedUser });
+      res.status(201).json({ message: "Registration successful. Please check your email to confirm your account.", savedUser });
     } else {
       next(new Error("Invalid Email", { cause: 404 }));
     }
