@@ -42,30 +42,32 @@ A robust and scalable backend API for an e-commerce platform, built with **Node.
 
 
 🧪 API Testing
-Use Postman to interact with and test the API endpoints. Below are the key endpoints along with request methods, example payloads, expected responses, and authentication details where applicable.
 
-1. Register a New User
-Endpoint: POST /api/auth/register
-Description: Create a new user account.
-Request Body (JSON):
+Use **Postman** to interact with and test the API endpoints. Below are the key endpoints along with request methods, example payloads, expected responses, and authentication details where applicable.
 
-json
-Copy
-Edit
+
+---
+
+#### 1. Register a New User  
+**Endpoint:** `POST /api/auth/register`  
+**Description:** Create a new user account.  
+**Request Body (JSON):**
+```json
 {
   "username": "johndoe",
   "email": "johndoe@example.com",
   "password": "StrongPassword123"
 }
+```
+
 Successful Response (201 Created):
 
-json
-Copy
-Edit
 {
   "message": "User registered successfully",
   "userId": "abc123"
 }
+
+
 2. User Login
 Endpoint: POST /api/auth/login
 Description: Authenticate user and receive a JWT token for authorized requests.
