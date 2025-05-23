@@ -84,10 +84,9 @@ Successful Response (201 Created):
 
 
 2. User Login
-Endpoint: POST /api/v1/auth/login
-Description: Authenticate user and receive a JWT token for authorized requests.
-Request Body (JSON):
-
+**Endpoint:** `POST /api/v1/auth/login`
+**Description:** Authenticate user and receive a JWT token for authorized requests.
+**Request Body (JSON):**
 ```json
 { 
   "email": "johndoe@example.com",
