@@ -80,7 +80,7 @@ Successful Response (201 Created):
 
 ```
 
-[📬 Click here to open the Postman collection]([https://www.postman.com/your-link-here](https://graduation-space-584306.postman.co/workspace/My-Workspace~d8e95f0f-1d84-4459-8a9c-dd43a2344723/request/21090382-10a25b95-32be-4382-a34a-b8f7bdc6111d?action=share&creator=21090382&ctx=documentation))
+[📬 Click here to open the Postman collection](https://www.postman.com/your-link-here](https://graduation-space-584306.postman.co/workspace/My-Workspace~d8e95f0f-1d84-4459-8a9c-dd43a2344723/request/21090382-10a25b95-32be-4382-a34a-b8f7bdc6111d?action=share&creator=21090382&ctx=documentation)
 
 
 2. User Login
