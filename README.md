@@ -49,7 +49,7 @@ Use **Postman** to interact with and test the API endpoints. Below are the key e
 ---
 
 #### 1. Register a New User  
-**Endpoint:** `POST /api/auth/signUp`  
+**Endpoint:** `POST /api/v1/auth/signUp`  
 **Description:** Create a new user account.  
 **Request Body (JSON):**
 ```json
@@ -80,29 +80,28 @@ Successful Response (201 Created):
 
 ```
 
-[📬 Click here to open the Postman collection](https://graduation-space-584306.postman.co/workspace/My-Workspace~d8e95f0f-1d84-4459-8a9c-dd43a2344723/request/21090382-10a25b95-32be-4382-a34a-b8f7bdc6111d?share=true&origin=request)
+[📬 Click here to open the signUp request](https://graduation-space-584306.postman.co/workspace/My-Workspace~d8e95f0f-1d84-4459-8a9c-dd43a2344723/request/21090382-10a25b95-32be-4382-a34a-b8f7bdc6111d?share=true&origin=request)
 
 
 2. User Login
-Endpoint: POST /api/auth/login
+Endpoint: POST /api/v1/auth/login
 Description: Authenticate user and receive a JWT token for authorized requests.
 Request Body (JSON):
 
-json
-Copy
-Edit
-{
+```json
+{ 
   "email": "johndoe@example.com",
   "password": "StrongPassword123"
 }
+```
 Successful Response (200 OK):
 
-json
-Copy
-Edit
+```json
 {
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+    "message": "Welcome",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzA3Yzc2ZjIwMmJlMjE1NjI4NWYxNCIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTc0ODAwOTg0NiwiZXhwIjoxNzQ4MTgyNjQ2fQ.8WpE8Z1MQWN9ArenhgzFQtfkfkPLr8mXbE_4G8LEqps"
 }
+```
 Note: Save the returned JWT token. Use it as a Bearer token in the Authorization header for protected endpoints.
 
 3. Get Products
