@@ -49,22 +49,32 @@ Use **Postman** to interact with and test the API endpoints. Below are the key e
 ---
 
 #### 1. Register a New User  
-**Endpoint:** `POST /api/auth/register`  
+**Endpoint:** `POST /api/auth/signUp`  
 **Description:** Create a new user account.  
 **Request Body (JSON):**
 ```json
 {
-  "username": "johndoe",
-  "email": "johndoe@example.com",
-  "password": "StrongPassword123"
+    "userName": "Johndoe",
+    "email": "johndoe@example.com",
+    "password": "Test123",
+    "cPassword": "Test123"
+
 }
 ```
 
 Successful Response (201 Created):
 ```
 {
-  "message": "User registered successfully",
-  "userId": "abc123"
+     "message": "Registration successful. Please check your email to confirm your   account.",
+    "savedUser": {
+        "userName": "Johndoe",
+        "email": "johndoe@example.com",
+        "password": "$2a$09$nOOFjl8aQjOEtJonKNBUp.lafZUb5F7vOYzltLL0ert44PotCXGlO",
+        "role": "User",
+        "active": false,
+        "confirmEmail": false,
+       ...
+    }
 }
 ```
 
