@@ -63,9 +63,9 @@ Use **Postman** to interact with and test the API endpoints. Below are the key e
 ```
 
 Successful Response (201 Created):
-```
+```json
 {
-     "message": "Registration successful. Please check your email to confirm your   account.",
+    "message": "Registration successful. Please check your email to confirm your   account.",
     "savedUser": {
         "userName": "Johndoe",
         "email": "johndoe@example.com",
@@ -76,7 +76,10 @@ Successful Response (201 Created):
        ...
     }
 }
+
+
 ```
+https://graduation-space-584306.postman.co/workspace/My-Workspace~d8e95f0f-1d84-4459-8a9c-dd43a2344723/request/21090382-10a25b95-32be-4382-a34a-b8f7bdc6111d?action=share&creator=21090382&ctx=documentation
 
 2. User Login
 Endpoint: POST /api/auth/login
