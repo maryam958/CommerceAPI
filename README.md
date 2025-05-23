@@ -61,12 +61,12 @@ Use **Postman** to interact with and test the API endpoints. Below are the key e
 ```
 
 Successful Response (201 Created):
-
+```
 {
   "message": "User registered successfully",
   "userId": "abc123"
 }
-
+```
 
 2. User Login
 Endpoint: POST /api/auth/login
