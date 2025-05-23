@@ -103,6 +103,8 @@ Successful Response (200 OK):
 }
 ```
 Note: Save the returned JWT token. Use it as a Bearer token in the Authorization header for protected endpoints.
+[📬 Click here to open the login request](https://graduation-space-584306.postman.co/workspace/My-Workspace~d8e95f0f-1d84-4459-8a9c-dd43a2344723/request/21090382-15c1da63-376a-4e91-b0e1-399f5358e75c)
+
 
 3. Get Products
 Endpoint: GET /api/products
@@ -111,9 +113,7 @@ Headers:
 Authorization: Bearer <your_jwt_token>
 Successful Response (200 OK):
 
-json
-Copy
-Edit
+```json
 [
   {
     "id": "prod123",
@@ -124,6 +124,8 @@ Edit
   },
   ...
 ]
+```
+
 4. Get Categories
 Endpoint: GET /api/categories
 Description: Retrieve all product categories.
@@ -131,9 +133,7 @@ Headers:
 Authorization: Bearer <your_jwt_token>
 Successful Response (200 OK):
 
-json
-Copy
-Edit
+```json
 [
   {
     "id": "cat123",
@@ -141,6 +141,8 @@ Edit
   },
   ...
 ]
+```
+
 5. Create an Order
 Endpoint: POST /api/orders
 Description: Place a new order with product details.
@@ -148,9 +150,7 @@ Headers:
 Authorization: Bearer <your_jwt_token>
 Request Body (JSON):
 
-json
-Copy
-Edit
+```json
 {
   "products": [
     { "productId": "prod123", "quantity": 2 },
@@ -158,28 +158,25 @@ Edit
   ],
   "shippingAddress": "123 Main St, City, Country"
 }
+```
 Successful Response (201 Created):
 
-json
-Copy
-Edit
+```json
 {
   "orderId": "order789",
   "status": "Processing",
   "totalAmount": 89.97
 }
-
+```
 
 
 📷 Screenshots
 Add Postman screenshots or terminal responses here.
 
 📌 Future Improvements
-Add Stripe payment integration
+- Add payment integration
 
-Add Swagger API docs
-
-
+- Add Swagger API docs
 
 | Method | Route              | Description      |
 | ------ | ------------------ | ---------------- |
