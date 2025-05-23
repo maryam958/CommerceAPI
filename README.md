@@ -83,7 +83,7 @@ Successful Response (201 Created):
 [📬 Click here to open the signUp request](https://graduation-space-584306.postman.co/workspace/My-Workspace~d8e95f0f-1d84-4459-8a9c-dd43a2344723/request/21090382-10a25b95-32be-4382-a34a-b8f7bdc6111d?share=true&origin=request)
 
 
-####2. User Login
+#### 2. User Login
 **Endpoint:** `POST /api/v1/auth/login`
 **Description:** Authenticate user and receive a JWT token for authorized requests.
 **Request Body (JSON):**
@@ -105,7 +105,7 @@ Note: Save the returned JWT token. Use it as a Bearer token in the Authorization
 [📬 Click here to open the login request](https://graduation-space-584306.postman.co/workspace/My-Workspace~d8e95f0f-1d84-4459-8a9c-dd43a2344723/request/21090382-15c1da63-376a-4e91-b0e1-399f5358e75c)
 
 
-####3. Get Products
+#### 3. Get Products
 **Endpoint:** `GET /api/products`
 **Description:** Retrieve a list of available products.
 Headers:
@@ -125,7 +125,7 @@ Successful Response (200 OK):
 ]
 ```
 
-####4. Get Categories
+#### 4. Get Categories
 **Endpoint:** `GET /api/categories`
 **Description:** Retrieve all product categories.
 **Headers:**
@@ -142,7 +142,7 @@ Successful Response (200 OK):
 ]
 ```
 
-####5. Create an Order
+#### 5. Create an Order
 **Endpoint:** `POST /api/orders`
 **Description:** Place a new order with product details.
 **Headers:**
