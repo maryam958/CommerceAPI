@@ -4,11 +4,15 @@ A robust and scalable backend API for an e-commerce platform, built with **Node.
 
 ## 🔧 Tech Stack
 
-- **Node.js** + **Express.js**
-- **MongoDB** + **Mongoose**
-- **JWT Authentication**
-- **RESTful API**
-- **Postman** for testing
+. **Node.js** & **Express.js** – Server-side runtime and framework
+
+- **MongoDB** & **Mongoose** – NoSQL database and ODM
+
+- **JWT Authentication** – Secure token-based auth system
+
+- **RESTful API** – Standardized and scalable endpoints
+
+- **Postman** – API testing and validation
 
 ---
 
