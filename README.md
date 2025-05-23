@@ -30,11 +30,11 @@ A robust and scalable backend API for an e-commerce platform, built with **Node.
 
 ## 📁 Project Structure
 .
-├── DB/              # DB connection and seeders
-├── config/          # JWT & environment config
-├── src/             # Models, Routes, Controllers
-├── app.js           # Express app entry point
-└── package.json
+├── DB/              # DB connection setup
+├── config/          # Environment variables and JWT configuration
+├── src/             # Application logic: models, routes, and controllers
+├── app.js           # Main Express application entry point
+└── package.json     # Project metadata and dependencies
 
 
 
