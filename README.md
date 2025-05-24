@@ -102,12 +102,8 @@ Without confirmation, they cannot log in or re-register with the same email.
 
 
 #### 2. User Login
-**Endpoint:** `POST /api/v1/auth/login`
-**Description:** Authenticate user and receive a JWT token for authorized requests.
-**Request Body (JSON):**
-
-**Endpoint:** `POST /api/v1/auth/signUp`  
-**Description:** Create a new user account.  
+**Endpoint:** `POST /api/v1/auth/login`  
+**Description:** Authenticate user and receive a JWT token for authorized requests. 
 **Request Body (JSON):**
 
 ```json
