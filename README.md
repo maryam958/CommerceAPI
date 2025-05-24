@@ -81,7 +81,8 @@ Successful Response (201 Created):
 ```
 - Note: The user account is created but inactive until the email is confirmed.
 
-⚠️ Edge Case: Email Already Registered but Not Confirmed
+⚠️ ###Edge Case:
+**Email Already Registered but Not Confirmed**
 If a user tries to register again using the same email without confirming it first, the API responds:
 
 Response (409 Conflict):
