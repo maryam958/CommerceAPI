@@ -120,7 +120,7 @@ Successful Response (200 OK):
 }
 ```
 Note: Save the returned JWT token. Use it as a Bearer token in the Authorization header for protected endpoints.
-[📬 Click here to open the login request](https://graduation-space-584306.postman.co/workspace/My-Workspace~d8e95f0f-1d84-4459-8a9c-dd43a2344723/request/21090382-15c1da63-376a-4e91-b0e1-399f5358e75c)
+[📬 Click here to open the login request](https://www.postman.com/graduation-space-584306/commerceapi/request/ug5adby/commerceapi?action=share&creator=21090382&ctx=documentation)
 
 
 #### 3. Get Products
