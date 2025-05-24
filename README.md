@@ -79,7 +79,24 @@ Successful Response (201 Created):
 
 
 ```
+- Note: The user account is created but inactive until the email is confirmed.
 
+⚠️ Edge Case: Email Already Registered but Not Confirmed
+If a user tries to register again using the same email without confirming it first, the API responds:
+
+Response — 409 Conflict
+
+```json
+{
+  "message": "This email is already registered but not yet confirmed. Please check your inbox to confirm your email."
+}
+```
+🔗 Email Confirmation Flow
+After registration, a confirmation email is sent.
+
+The user must click the confirmation link to activate their account.
+
+Without confirmation, they cannot log in or re-register with the same email.
 [📬 Click here to open the signUp request](https://www.postman.com/graduation-space-584306/commerceapi/request/5ugm73s/commerceapi?action=share&creator=21090382&ctx=documentation)
 
 
