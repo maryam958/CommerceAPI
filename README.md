@@ -210,7 +210,7 @@ Add Postman screenshots or terminal responses here.
 
 You can test all API endpoints using the following Postman collection:
 
-[📬 Click here to open the Postman collection](https://www.postman.com/your-link-here)
+[📬 Click here to open the Postman collection](https://www.postman.com/graduation-space-584306/commerceapi/collection/v1gadmp/commerceapi?action=share&creator=21090382)
 
 > Make sure to set the `Authorization` header (Bearer token) after logging in.
 
