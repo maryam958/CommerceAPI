@@ -106,6 +106,7 @@ Without confirmation, they cannot log in or re-register with the same email.
 **Description:** Authenticate user and receive a JWT token for authorized requests. 
 **Request Body (JSON):**
 
+
 ```json
 { 
   "email": "maryammohamedsobhy357@gmail.com",
