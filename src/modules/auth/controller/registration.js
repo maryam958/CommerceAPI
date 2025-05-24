@@ -19,7 +19,7 @@ export const signUp = asyncHandler(async (req, res, next) => {
     select: "email",
   });
   if (user) {
-    next(new Error("This email already register", { cause: 409 }));
+    next(new Error("Email already registered. Please confirm it to continue", { cause: 409 }));
   } else {
     let hashedPassword = bcrypt.hashSync(
       password,
