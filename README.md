@@ -84,7 +84,7 @@ Successful Response (201 Created):
 ⚠️ Edge Case: Email Already Registered but Not Confirmed
 If a user tries to register again using the same email without confirming it first, the API responds:
 
-Response — 409 Conflict
+Response (409 Conflict):
 
 ```json
 {
