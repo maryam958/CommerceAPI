@@ -54,8 +54,8 @@ Use **Postman** to interact with and test the API endpoints. Below are the key e
 **Request Body (JSON):**
 ```json
 {
-    "userName": "Johndoe",
-    "email": "johndoe@example.com",
+    "userName": "maryam",
+    "email": "maryammohamedsobhy357@gmail.com",
     "password": "Test123",
     "cPassword": "Test123"
 
@@ -65,11 +65,11 @@ Use **Postman** to interact with and test the API endpoints. Below are the key e
 Successful Response (201 Created):
 ```json
 {
-    "message": "Registration successful. Please check your email to confirm your   account.",
+    "message": "Registration successful. Please check your email to confirm your account.",
     "savedUser": {
-        "userName": "Johndoe",
-        "email": "johndoe@example.com",
-        "password": "$2a$09$nOOFjl8aQjOEtJonKNBUp.lafZUb5F7vOYzltLL0ert44PotCXGlO",
+        "userName": "maryam",
+        "email": "maryammohamedsobhy357@gmail.com",
+        "password": "$2a$09$rRMFNFsj3zwX.PoqLCJLHO0T25qGZpCD6kwExEcd6tBa8ES1Ozqy6",
         "role": "User",
         "active": false,
         "confirmEmail": false,
@@ -80,7 +80,7 @@ Successful Response (201 Created):
 
 ```
 
-[📬 Click here to open the signUp request](https://graduation-space-584306.postman.co/workspace/My-Workspace~d8e95f0f-1d84-4459-8a9c-dd43a2344723/request/21090382-10a25b95-32be-4382-a34a-b8f7bdc6111d?share=true&origin=request)
+[📬 Click here to open the signUp request](https://www.postman.com/graduation-space-584306/commerceapi/request/5ugm73s/commerceapi?action=share&creator=21090382&ctx=documentation)
 
 
 #### 2. User Login
