@@ -182,7 +182,7 @@ Forbidden Response (403 Forbidden):
 ```
 
 #### 📷UpdateRole API
-![Login API](./imgs/update_role_req_res.png)
+![Update_Role API](./imgs/update_role_req_res.png)
 
 [📬 Click here to open the update_role request](https://www.postman.com/graduation-space-584306/commerceapi/request/cqgqa9g/commerceapi?action=share&creator=21090382&ctx=documentation)
 
@@ -205,8 +205,11 @@ Successful Response (200 OK):
 }
 ```
 
+#### 📷 OTP Email
+![OTP Email](./iimgs/OTP_email.png)
+
 #### 📷SendCode API
-![Login API](./imgs/update_role_req_res.png)
+![SendCode API](./imgs/sendCode_req_res.png)
 
 [📬 Click here to open the update_role request](https://www.postman.com/graduation-space-584306/commerceapi/request/z7uqe3k/commerceapi?action=share&creator=21090382&ctx=documentation)
 
