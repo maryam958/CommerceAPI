@@ -136,6 +136,7 @@ The user must confirm their email before logging in.
 If the email is not confirmed, the login request will fail even with correct credentials.
 
 💡 Save the returned JWT token. Use it as a Bearer token in the Authorization header for all protected endpoints.
+Authorization: "Bearer__"+YOUR_TOKEN_HERE
 
 #### 📷Login API
 ![Login API](./imgs/login_req_res.png)
