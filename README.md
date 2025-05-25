@@ -84,8 +84,8 @@ Successful Response (201 Created):
 - Note: The user account is created but inactive until the email is confirmed.
 
 ##### ⚠️ Edge Case:
-    **Email Already Registered but Not Confirmed**
-    If a user tries to register again using the same email without confirming it first, the API responds the following Response:
+**Email Already Registered but Not Confirmed**
+If a user tries to register again using the same email without confirming it first, the API responds the following Response:
 
 Response (409 Conflict):
 
@@ -95,11 +95,11 @@ Response (409 Conflict):
 }
 ```
 🔗 Email Confirmation Flow
-After registration, a confirmation email is sent.
+Upon successful registration, a confirmation email is automatically sent to the user’s provided email address. To activate the account, the user must click the confirmation link included in the email.
 
-The user must click the confirmation link to activate their account.
-
-Without confirmation, they cannot log in or re-register with the same email.
+Important:
+- The account remains inactive until the email is confirmed.
+- Users cannot log in or re-register using the same email until the confirmation is completed.
 
 #### 📷 SignUp API
 ![SignUp Request & Response](./imgs/signup_req_res.png)
@@ -111,9 +111,9 @@ Without confirmation, they cannot log in or re-register with the same email.
 
 
 ### 2. User Login
-**Endpoint:** `POST /api/v1/auth/login`  
-**Description:** Authenticate user and receive a JWT token for authorized requests.   
-**Request Body (JSON):**
+- **Endpoint:** `POST /api/v1/auth/login`  
+- **Description:** Authenticate user and receive a JWT token for authorized requests.   
+- **Request Body (JSON):**
 ```json
 { 
   "email": "maryammohamedsobhy357@gmail.com",
