@@ -143,6 +143,49 @@ Authorization: "Bearer__"+YOUR_TOKEN_HERE
 
 [📬 Click here to open the login request](https://www.postman.com/graduation-space-584306/commerceapi/request/ug5adby/commerceapi?action=share&creator=21090382&ctx=documentation)
 
+### 3. Update Role 
+- **Endpoint:** `PUT /api/v1/auth/updateRole`  
+- **Description:** Authenticate user and receive a JWT token for authorized requests.   
+- **Request Body (JSON):**
+```json
+{
+    "userId":"6832feee9fcf13c4bc5d2d16"
+
+}
+```
+Successful Response (200 OK):
+
+```json
+{
+    "message": "Updated",
+    "updatedUser": {
+        "_id": "6832feee9fcf13c4bc5d2d16",
+        "userName": "menna",
+        "email": "menna@gmail.com",
+        "password": "$2a$09$dLppfvL3r6yrIQTiyPDQGeEoMG2eA3qOORlY7MD9tdpiBwxvtTTk6",
+        "role": "Admin",
+        "active": false,
+        "confirmEmail": true,
+        ...
+}
+}
+```
+⚠️ Important Note:
+Only users with the Admin role are authorized to promote other users to Admin. If a non-admin user attempts this operation, the request will be rejected.
+
+Forbidden Response (403 OK):
+```json
+{
+    "message": "Not authorized user",
+}
+```
+
+#### 📷UpdateRole API
+![Login API](./imgs/login_req_res.png)
+
+[📬 Click here to open the update_role request](https://www.postman.com/graduation-space-584306/commerceapi/request/cqgqa9g/commerceapi?action=share&creator=21090382&ctx=documentation)
+
+
 
 ### 3. Get Products
 **Endpoint:** `GET /api/products`
