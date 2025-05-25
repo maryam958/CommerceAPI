@@ -50,7 +50,7 @@ Use **Postman** to interact with and test the API endpoints. Below are the key e
 ---
 
 ## 📘 Complete API Usage Guide
-#### 1. Register a New User  
+### 1. Register a New User  
 **Endpoint:** `POST /api/v1/auth/signUp`  
 **Description:** Create a new user account.  
 **Request Body (JSON):**
@@ -101,16 +101,16 @@ The user must click the confirmation link to activate their account.
 
 Without confirmation, they cannot log in or re-register with the same email.
 
-### 📷 SignUp API
+#### 📷 SignUp API
 ![SignUp Request & Response](./imgs/signup_req_res.png)
 
-### 📷 Email Confirmation for Signing Up
+#### 📷 Email Confirmation for Signing Up
 ![Email Confirmation for Signing Up](./imgs/email_confirmation.png)
 
 [📬 Click here to open the signUp request](https://www.postman.com/graduation-space-584306/commerceapi/request/5ugm73s/commerceapi?action=share&creator=21090382&ctx=documentation)
 
 
-#### 2. User Login
+### 2. User Login
 **Endpoint:** `POST /api/v1/auth/login`  
 **Description:** Authenticate user and receive a JWT token for authorized requests.   
 **Request Body (JSON):**
@@ -130,13 +130,13 @@ Successful Response (200 OK):
 ```
 Note: Save the returned JWT token. Use it as a Bearer token in the Authorization header for protected endpoints.
 
-### 📷Login API
+#### 📷Login API
 ![Login API](./imgs/login_req_res.png)
 
 [📬 Click here to open the login request](https://www.postman.com/graduation-space-584306/commerceapi/request/ug5adby/commerceapi?action=share&creator=21090382&ctx=documentation)
 
 
-#### 3. Get Products
+### 3. Get Products
 **Endpoint:** `GET /api/products`
 **Description:** Retrieve a list of available products.
 Headers:
@@ -156,7 +156,7 @@ Successful Response (200 OK):
 ]
 ```
 
-#### 4. Get Categories
+### 4. Get Categories
 **Endpoint:** `GET /api/categories`
 **Description:** Retrieve all product categories.
 **Headers:**
@@ -173,7 +173,7 @@ Successful Response (200 OK):
 ]
 ```
 
-#### 5. Create an Order
+### 5. Create an Order
 **Endpoint:** `POST /api/orders`
 **Description:** Place a new order with product details.
 **Headers:**
