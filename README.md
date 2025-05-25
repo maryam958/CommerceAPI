@@ -100,7 +100,7 @@ The user must click the confirmation link to activate their account.
 Without confirmation, they cannot log in or re-register with the same email.
 ## API Demo
 
-![API Demo](./imgs/api-demo.png)
+![API Demo](./imgs/signup_req_res.png)
 
 
 [📬 Click here to open the signUp request](https://www.postman.com/graduation-space-584306/commerceapi/request/5ugm73s/commerceapi?action=share&creator=21090382&ctx=documentation)
