@@ -187,6 +187,31 @@ Forbidden Response (403 Forbidden):
 [📬 Click here to open the update_role request](https://www.postman.com/graduation-space-584306/commerceapi/request/cqgqa9g/commerceapi?action=share&creator=21090382&ctx=documentation)
 
 
+### 4. SendCode
+- **Endpoint:** `POST /api/v1/auth/sendCode`  
+- **Description:** Sends a one-time password (OTP) to the email address provided. This is used for password recovery and works only if the email belongs to a registered user.
+- **Request Body (JSON):**
+```json
+{
+    "email":"maryammohamedsobhy357@gmail.com"
+
+}
+```
+Successful Response (200 OK):
+
+```json
+{
+    "message": "Done, please check your email"
+}
+```
+
+#### 📷SendCode API
+![Login API](./imgs/update_role_req_res.png)
+
+[📬 Click here to open the update_role request](https://www.postman.com/graduation-space-584306/commerceapi/request/z7uqe3k/commerceapi?action=share&creator=21090382&ctx=documentation)
+
+
+
 
 ### 3. Get Products
 **Endpoint:** `GET /api/products`
