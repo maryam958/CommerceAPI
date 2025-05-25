@@ -105,7 +105,8 @@ Without confirmation, they cannot log in or re-register with the same email.
 ## Email Confirmation for Signing Up
 ![Email Confirmation for Signing Up](./imgs/email_confirmation.png)
 
-[📬 Click here to open the signUp request](https://www.postman.com/graduation-space-584306/commerceapi/request/5ugm73s/commerceapi?action=share&creator=21090382&ctx=documentation)
+
+<a href="https://www.postman.com/graduation-space-584306/commerceapi/request/5ugm73s/commerceapi?action=share&creator=21090382&ctx=documentation" target="_blank">📬 Click here to open the signUp request</a>
 
 
 #### 2. User Login
