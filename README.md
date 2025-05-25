@@ -1,6 +1,7 @@
 # 🛍️ CommerceAPI 
 
 A robust and scalable backend API for an e-commerce platform, built with **Node.js**, **Express.js**, and **MongoDB**. This application supports full CRUD operations for products, categories, and orders, along with secure **JWT-based user authentication**. Designed with modular architecture and tested thoroughly using **Postman**, it's an ideal foundation for modern online shopping applications.
+
 ---
 ## 🔧 Tech Stack
 
