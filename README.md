@@ -196,6 +196,7 @@ Successful Response (201 Created):
 📌 Future Improvements
 - Add payment integration
 
+## 📊 Auth API Endpoints
 | Method  | Route                | Description                         |
 | ------  | ------------------   | --------------------------------    |
 | POST    | /api/v1/auth/signUp  | Register a new user account         |
