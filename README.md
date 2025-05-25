@@ -98,8 +98,8 @@ After registration, a confirmation email is sent.
 The user must click the confirmation link to activate their account.
 
 Without confirmation, they cannot log in or re-register with the same email.
-## API Demo
 
+## SignUp Request & Response
 ![API Demo](./imgs/signup_req_res.png)
 
 
