@@ -90,6 +90,5 @@ export const deleteOrder = asyncHandler(async (req, res, next) => {
     model: orderModel,
     condition: { _id: orderId },
   });
-  console.log(deletedOrder);
   res.status(200).json({ message: "Updated", deletedOrder });
 });

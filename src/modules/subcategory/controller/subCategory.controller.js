@@ -47,7 +47,6 @@ export const updateSubCategory = asyncHandler(async (req, res) => {
     req.body.image = secure_url;
     req.body.public_id = public_id;
   }
-  console.log(req.body);
   let updatedSubCategory = await findByIdAndUpdate({
     model: subCategoryModel,
     condition: { _id: subCategoryId },
@@ -108,7 +107,6 @@ export const deleteSubCategory = asyncHandler(async (req, res, next) => {
         model: subCategoryModel,
         condition: { _id: subcategoryId },
       });
-      console.log(deletedSubCategory);
       res.status(200).json({ message: "Done", deletedSubCategory });
     } else {
       next(

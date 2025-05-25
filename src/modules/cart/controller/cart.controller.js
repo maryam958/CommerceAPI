@@ -35,6 +35,5 @@ export const createCart = asyncHandler(async (req, res, next) => {
     data: cart,
     options: { new: true },
   });
-  console.log(updated);
   res.status(200).json({ message: "Updated", updated });
 });

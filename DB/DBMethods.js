@@ -42,7 +42,6 @@ export const findByIdAndUpdate = async ({
   options = {},
 } = {}) => {
   const res = await model.findByIdAndUpdate(condition, data, options);
-  console.log(findByIdAndUpdate);
   return res;
 };
 

@@ -147,7 +147,6 @@ export const updateRole = async (req, res, next) => {
         options: { new: true },
       });
       res.status(200).json({ message: "Updated", updatedUser });
-      console.log(updatedUser);
     }
   }
 };
@@ -159,7 +158,6 @@ export const sendCode = async (req, res) => {
     res.json({ message: "User didn't register yet" });
   } else {
     let OTPCode = nanoid();
-    console.log(OTPCode);
     await userModel.findByIdAndUpdate(user._id, { OTPCode });
     let message = `your OTPCode is ${OTPCode}`;
     sendEmail(user.email, "your OTP Code", message);

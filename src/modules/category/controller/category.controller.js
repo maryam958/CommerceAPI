@@ -72,7 +72,6 @@ export const getCategoryById = asyncHandler(async (req, res, next) => {
   let { categoryId } = req.params;
   let category = await findById({ model: categoryModel, id: categoryId });
   if (!category) {
-    console.log(category);
     next(new Error("Invalid category", { cause: 404 }));
   } else {
     res.status(200).json({ message: "Done", category });
@@ -91,7 +90,6 @@ export const deleteCategory = asyncHandler(async (req, res, next) => {
         model: categoryModel,
         condition: { _id: categoryId },
       });
-      console.log(deletedCategory);
       res.status(200).json({ message: "Done", deletedCategory });
     } else {
       next(new Error("you are not the owner of this category", { cause: 403 }));

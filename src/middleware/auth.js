@@ -10,7 +10,6 @@ export const roles = {
 export const auth = (acceptedRoles = [roles.User]) => {
   return async (req, res, next) => {
     const { authorization } = req.headers;
-    console.log({ authorization });
     if (!authorization?.startsWith(process.env.BearerKey)) {
       next(new Error("In-valid Bearer key", { cause: 400 }));
     } else {
