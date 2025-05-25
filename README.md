@@ -99,7 +99,7 @@ The user must click the confirmation link to activate their account.
 
 Without confirmation, they cannot log in or re-register with the same email.
 
-## 📷 SignUp Request & Response
+## 📷 SignUp API
 ![SignUp Request & Response](./imgs/signup_req_res.png)
 
 ## 📷 Email Confirmation for Signing Up
@@ -127,6 +127,10 @@ Successful Response (200 OK):
 }
 ```
 Note: Save the returned JWT token. Use it as a Bearer token in the Authorization header for protected endpoints.
+
+## 📷Login API
+![Login API](./imgs/login_req_res.png)
+
 [📬 Click here to open the login request](https://www.postman.com/graduation-space-584306/commerceapi/request/ug5adby/commerceapi?action=share&creator=21090382&ctx=documentation)
 
 
