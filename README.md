@@ -145,7 +145,8 @@ Authorization: "Bearer__"+YOUR_TOKEN_HERE
 
 ### 3. Update Role 
 - **Endpoint:** `PUT /api/v1/auth/updateRole`  
-- **Description:** Authenticate user and receive a JWT token for authorized requests.   
+- **Description:** Promote a user to the Admin role after verifying email confirmation. Requires an authenticated Admin user.
+- **Headers:** Authorization: Bearer__<your_jwt_token>
 - **Request Body (JSON):**
 ```json
 {
@@ -181,7 +182,7 @@ Forbidden Response (403 OK):
 ```
 
 #### 📷UpdateRole API
-![Login API](./imgs/login_req_res.png)
+![Login API](./imgs/update_role_req_res.png)
 
 [📬 Click here to open the update_role request](https://www.postman.com/graduation-space-584306/commerceapi/request/cqgqa9g/commerceapi?action=share&creator=21090382&ctx=documentation)
 
