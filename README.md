@@ -49,7 +49,7 @@ Use **Postman** to interact with and test the API endpoints. Below are the key e
 
 ---
 
-### 📘 Complete API Usage Guide
+## 📘 Complete API Usage Guide
 #### 1. Register a New User  
 **Endpoint:** `POST /api/v1/auth/signUp`  
 **Description:** Create a new user account.  
