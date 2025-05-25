@@ -136,7 +136,7 @@ The user must confirm their email before logging in.
 If the email is not confirmed, the login request will fail even with correct credentials.
 
 💡 Save the returned JWT token. Use it as a Bearer token in the Authorization header for all protected endpoints.
-Authorization: "Bearer__"+YOUR_TOKEN_HERE
+Authorization: "Bearer__"+jwt_token
 
 #### 📷Login API
 ![Login API](./imgs/login_req_res.png)
@@ -146,7 +146,7 @@ Authorization: "Bearer__"+YOUR_TOKEN_HERE
 ### 3. Update Role 
 - **Endpoint:** `PUT /api/v1/auth/updateRole`  
 - **Description:** Promote a user to the Admin role after verifying email confirmation. Requires an authenticated Admin user.
-- **Headers:** Authorization: Bearer__<your_jwt_token>
+- **Headers:** Authorization: Bearer__<jwt_token>
 - **Request Body (JSON):**
 ```json
 {
@@ -174,7 +174,7 @@ Successful Response (200 OK):
 ⚠️ Important Note:
 Only users with the Admin role are authorized to promote other users to Admin. If a non-admin user attempts this operation, the request will be rejected.
 
-Forbidden Response (403 OK):
+Forbidden Response (403 Forbidden):
 ```json
 {
     "message": "Not authorized user",
@@ -192,7 +192,7 @@ Forbidden Response (403 OK):
 **Endpoint:** `GET /api/products`
 **Description:** Retrieve a list of available products.
 Headers:
-Authorization: Bearer <your_jwt_token>
+Authorization: Bearer <jwt_token>
 Successful Response (200 OK):
 
 ```json
@@ -212,7 +212,7 @@ Successful Response (200 OK):
 **Endpoint:** `GET /api/categories`
 **Description:** Retrieve all product categories.
 **Headers:**
-**Authorization:** Bearer <your_jwt_token>
+**Authorization:** Bearer <jwt_token>
 Successful Response (200 OK):
 
 ```json
@@ -229,7 +229,7 @@ Successful Response (200 OK):
 **Endpoint:** `POST /api/orders`
 **Description:** Place a new order with product details.
 **Headers:**
-**Authorization:** Bearer <your_jwt_token>
+**Authorization:** Bearer <jwt_token>
 Request Body (JSON):
 
 ```json
