@@ -1,7 +1,7 @@
 # 🛍️ CommerceAPI 
 
 A robust and scalable backend API for an e-commerce platform, built with **Node.js**, **Express.js**, and **MongoDB**. This application supports full CRUD operations for products, categories, and orders, along with secure **JWT-based user authentication**. Designed with modular architecture and tested thoroughly using **Postman**, it's an ideal foundation for modern online shopping applications.
-
+---
 ## 🔧 Tech Stack
 
 - **Node.js** & **Express.js** – Server-side runtime and framework
@@ -40,7 +40,7 @@ A robust and scalable backend API for an e-commerce platform, built with **Node.
 
 
 
-
+---
 ## 🧪 API Testing
 
 Use **Postman** to interact with and test the API endpoints. Below are the key endpoints along with request methods, example payloads, expected responses, and authentication details where applicable.
@@ -48,6 +48,7 @@ Use **Postman** to interact with and test the API endpoints. Below are the key e
 
 ---
 
+### 📘 Complete API Usage Guide
 #### 1. Register a New User  
 **Endpoint:** `POST /api/v1/auth/signUp`  
 **Description:** Create a new user account.  
