@@ -41,7 +41,7 @@ A robust and scalable backend API for an e-commerce platform, built with **Node.
 
 
 
-🧪 API Testing
+## 🧪 API Testing
 
 Use **Postman** to interact with and test the API endpoints. Below are the key endpoints along with request methods, example payloads, expected responses, and authentication details where applicable.
 
@@ -193,10 +193,10 @@ Successful Response (201 Created):
 }
 ```
 
-📌 Future Improvements
+## 📌 Future Improvements
 - Add payment integration
 
-📊 Auth API Endpoints
+## 📊 Auth API Endpoints
 | Method  | Route                | Description                         |
 | ------  | ------------------   | --------------------------------    |
 | POST    | /api/v1/auth/signUp  | Register a new user account         |
@@ -207,18 +207,18 @@ Successful Response (201 Created):
 | ...     | ...                  | ...                                 |
 
 
-### 🔗 Postman Collection
+## 🔗 Postman Collection
 
 You can test all API endpoints using the following Postman collection:
 
 [📬 Click here to open the Postman collection](https://www.postman.com/graduation-space-584306/commerceapi/collection/v1gadmp/commerceapi?action=share&creator=21090382)
 
-🔐 Authorization Note:
+## 🔐 Authorization Note:
 After logging in, ensure you set the Authorization header with the Bearer token in your API requests. This token is required to access protected routes and perform actions based on your authorized role.
 
 Deployed on Vercel
 
-👩‍💻 Author
+## 👩‍💻 Author
 Maryam Mohamed
 Backend Developer
 
