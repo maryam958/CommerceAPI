@@ -83,7 +83,7 @@ Successful Response (201 Created):
 ```
 - Note: The user account is created but inactive until the email is confirmed.
 
-##### ⚠️ Edge Case:
+#### ⚠️ Edge Case:
 **Email Already Registered but Not Confirmed**
 If a user tries to register again using the same email without confirming it first, the API responds the following Response:
 
@@ -94,7 +94,7 @@ Response (409 Conflict):
   "message": "This email is already registered but not yet confirmed. Please check your inbox to confirm your email."
 }
 ```
-### 🔗 Email Confirmation Flow
+#### 🔗 Email Confirmation Flow
 
 After a user successfully registers, a **confirmation email** is sent to the provided email address.  
 To activate the account, the user **must click the confirmation link** in the email.
