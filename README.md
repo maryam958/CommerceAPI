@@ -99,14 +99,13 @@ The user must click the confirmation link to activate their account.
 
 Without confirmation, they cannot log in or re-register with the same email.
 
-## SignUp Request & Response
+## 📷 SignUp Request & Response
 ![SignUp Request & Response](./imgs/signup_req_res.png)
 
-## Email Confirmation for Signing Up
+## 📷 Email Confirmation for Signing Up
 ![Email Confirmation for Signing Up](./imgs/email_confirmation.png)
 
-
-<a href="https://www.postman.com/graduation-space-584306/commerceapi/request/5ugm73s/commerceapi?action=share&creator=21090382&ctx=documentation" target="_blank">📬 Click here to open the signUp request</a>
+[📬 Click here to open the signUp request](https://www.postman.com/graduation-space-584306/commerceapi/request/5ugm73s/commerceapi?action=share&creator=21090382&ctx=documentation)
 
 
 #### 2. User Login
@@ -194,24 +193,17 @@ Successful Response (201 Created):
 }
 ```
 
-
-📷 Screenshots
-Add Postman screenshots or terminal responses here.
-
 📌 Future Improvements
 - Add payment integration
 
-- Add Swagger API docs
-
-| Method | Route              | Description      |
-| ------ | ------------------ | ---------------- |
-| GET    | /api/products      | Get all products |
-| POST   | /api/products      | Add new product  |
-| POST   | /api/auth/register | Register user    |
-| POST   | /api/auth/login    | Login user       |
-| ...    | ...                | ...              |
-
-
+| Method  | Route                | Description                         |
+| ------  | ------------------   | --------------------------------    |
+| POST    | /api/v1/auth/signUp  | Register a new user account         |
+| POST    | /api/v1/auth/logIn   | Authenticate user and return token  |
+| PUT     | /api/v1/updateRole   | Promote user to Admin after email confirmation |
+| POST    | /api/v1/auth/sendCode      | Send OTP to user email in forget pass case |
+| POST    | /api/v1/auth/forgetPassword      | Reset password using email and OTP |
+| ...     | ...                  | ...                                 |
 
 
 ### 🔗 Postman Collection
@@ -220,9 +212,10 @@ You can test all API endpoints using the following Postman collection:
 
 [📬 Click here to open the Postman collection](https://www.postman.com/graduation-space-584306/commerceapi/collection/v1gadmp/commerceapi?action=share&creator=21090382)
 
-> Make sure to set the `Authorization` header (Bearer token) after logging in.
+🔐 Authorization Note:
+After logging in, ensure you set the Authorization header with the Bearer token in your API requests. This token is required to access protected routes and perform actions based on your authorized role.
 
-Deploy on Render / Vercel
+Deployed on Vercel
 
 👩‍💻 Author
 Maryam Mohamed
