@@ -94,12 +94,15 @@ Response (409 Conflict):
   "message": "This email is already registered but not yet confirmed. Please check your inbox to confirm your email."
 }
 ```
-🔗 Email Confirmation Flow
-Upon successful registration, a confirmation email is automatically sent to the user’s provided email address. To activate the account, the user must click the confirmation link included in the email.
+### 🔗 Email Confirmation Flow
 
-Important:
-- The account remains inactive until the email is confirmed.
-- Users cannot log in or re-register using the same email until the confirmation is completed.
+After a user successfully registers, a **confirmation email** is sent to the provided email address.  
+To activate the account, the user **must click the confirmation link** in the email.
+
+> ℹ️ **Note:**
+> - The account remains **inactive** until the email is confirmed.
+> - Users **cannot log in or re-register** with the same email until confirmation is completed.
+
 
 #### 📷 SignUp API
 ![SignUp Request & Response](./imgs/signup_req_res.png)
