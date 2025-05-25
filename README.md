@@ -131,7 +131,11 @@ Successful Response (200 OK):
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzA3Yzc2ZjIwMmJlMjE1NjI4NWYxNCIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTc0ODAwOTg0NiwiZXhwIjoxNzQ4MTgyNjQ2fQ.8WpE8Z1MQWN9ArenhgzFQtfkfkPLr8mXbE_4G8LEqps"
 }
 ```
-Note: Save the returned JWT token. Use it as a Bearer token in the Authorization header for protected endpoints.
+⚠️ Important Note:
+The user must confirm their email before logging in.
+If the email is not confirmed, the login request will fail even with correct credentials.
+
+💡 Save the returned JWT token. Use it as a Bearer token in the Authorization header for all protected endpoints.
 
 #### 📷Login API
 ![Login API](./imgs/login_req_res.png)
