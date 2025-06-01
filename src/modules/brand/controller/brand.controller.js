@@ -13,7 +13,8 @@ import { paginate } from "../../../services/pagination.js";
 
 export const addBrand = asyncHandler(async (req, res) => {
   if (!req.file) {
-    next(new Error("You have to upload an image", { cause: 422 }));
+    // next(new Error("You have to upload an image", { cause: 422 }));
+    throw new Error("You have to upload an image");
   } else {
     let { secure_url, public_id } = await cloudinary.uploader.upload(
       req.file.path,
