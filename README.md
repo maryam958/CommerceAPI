@@ -171,7 +171,8 @@ Authorization: "Bearer__"+jwt_token
 ### 3. Update Role 
 - **Endpoint:** `PUT /api/v1/auth/updateRole`  
 - **Description:** Promote a user to the Admin role after verifying email confirmation. Requires an authenticated Admin user.
-- **Headers:** Authorization: Bearer__<jwt_token>
+- **Authentication:**: Bearer__<jwt_token>
+- **Authorization:** Admin
 - **Request Body (JSON):**
 ```json
 {
@@ -265,11 +266,11 @@ Successful Response (200 OK):
 
 
 
-### 6. Get Products
-**Endpoint:** `GET /api/products`
-**Description:** Retrieve a list of available products.
-Headers:
-Authorization: Bearer <jwt_token>
+### 6. Add Brand
+**Endpoint:** `POST /api/v1/auth/addBrand`  
+**Description:** Creates a new brand by uploading an image to Cloudinary and saving the brand details (including image URL, slug, and creator) to the database. Requires an image file and authentication.
+- **Authentication:**: Bearer__<jwt_token>
+- **Authorization:** Admin
 Successful Response (200 OK):
 
 ```json
@@ -288,8 +289,7 @@ Successful Response (200 OK):
 ### 4. Get Categories
 **Endpoint:** `GET /api/categories`
 **Description:** Retrieve all product categories.
-**Headers:**
-**Authorization:** Bearer <jwt_token>
+- **Authentication:**: Bearer__<jwt_token>
 Successful Response (200 OK):
 
 ```json
@@ -305,8 +305,7 @@ Successful Response (200 OK):
 ### 5. Create an Order
 **Endpoint:** `POST /api/orders`
 **Description:** Place a new order with product details.
-**Headers:**
-**Authorization:** Bearer <jwt_token>
+- **Authentication:**: Bearer__<jwt_token>
 Request Body (JSON):
 
 ```json
