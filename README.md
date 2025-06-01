@@ -103,7 +103,7 @@ To activate the account, the user **must click the confirmation link** in the em
 > - The account remains **inactive** until the email is confirmed.
 > - Users **cannot log in or re-register** with the same email until confirmation is completed.
 
-✅ Validation Rules
+✅ **Validation Rules:**
 The Sign Up endpoint uses Joi validation to ensure that user input meets specific criteria before processing. If validation fails, the API responds with a clear error message.
 - Validation Schema:
  ```json
