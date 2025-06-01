@@ -103,6 +103,31 @@ To activate the account, the user **must click the confirmation link** in the em
 > - The account remains **inactive** until the email is confirmed.
 > - Users **cannot log in or re-register** with the same email until confirmation is completed.
 
+✅ Validation Rules
+The Sign Up endpoint uses Joi validation to ensure that user input meets specific criteria before processing. If validation fails, the API responds with a clear error message.
+- Validation Schema:
+ ```json
+  {
+  "userName": "string (required) - minimum 2, maximum 20 characters",
+  "email": "string (required) - must be a valid email ending with .com or .net",
+  "password": "string (required) - must match a specific pattern",
+  "cPassword": "string (required) - must exactly match `password`"
+}
+```
+🔐 Password Pattern Requirements:
+- Must start with an uppercase letter
+- Followed by 3 to 8 lowercase letters or digits
+- Examples of valid passwords:
+Aabc1
+Zx12
+
+❌ If the password doesn’t match the pattern:
+You will receive an error message like:
+```json
+{
+  "message": "Not matching pattern"
+}
+```
 
 #### 📷 SignUp API
 ![SignUp Request & Response](./imgs/signup_req_res.png)
@@ -214,13 +239,16 @@ Successful Response (200 OK):
 [📬 Click here to open the send_OTP_code request](https://www.postman.com/graduation-space-584306/commerceapi/request/z7uqe3k/commerceapi?action=share&creator=21090382&ctx=documentation)
 
 
-### 5. ForgetPassword(jjjjjj)
-- **Endpoint:** `POST /api/v1/auth/sendCode`  
-- **Description:** Sends a one-time password (OTP) to the email address provided. This is used for password recovery and works only if the email belongs to a registered user.
+### 5. ForgetPassword
+- **Endpoint:** `POST /api/v1/auth/forgetPassword`  
+- **Description:** Resets the user's password using an OTP code previously sent to their email. The request must include the user's email, the OTP code, and the new password. This only works if the provided email and OTP match an existing user.
 - **Request Body (JSON):**
 ```json
 {
-    "email":"maryammohamedsobhy357@gmail.com"
+    "OTPCode":"gCQdUzQ3NntJDtxrwx8K8",
+    "email":"maryammohamedsobhy357@gmail.com",
+    "password":"Newpass123"
+    
 
 }
 ```
@@ -228,25 +256,16 @@ Successful Response (200 OK):
 
 ```json
 {
-    "message": "Done, please check your email"
+    "message": "Done, your password has been changed successfully"
 }
 ```
 
-#### 📷 OTP Email
-![OTP Email](./imgs/OTP_email.png)
 
-#### 📷SendCode API
-![SendCode API](./imgs/sendCode_req_res.png)
-
-[📬 Click here to open the send_OTP_code request](https://www.postman.com/graduation-space-584306/commerceapi/request/z7uqe3k/commerceapi?action=share&creator=21090382&ctx=documentation)
+[📬 Click here to open the forget_password_request](https://www.postman.com/graduation-space-584306/commerceapi/request/2wxpjcm/commerceapi?action=share&creator=21090382&ctx=documentation)
 
 
 
-
-
-------------------
-
-### 3. Get Products
+### 6. Get Products
 **Endpoint:** `GET /api/products`
 **Description:** Retrieve a list of available products.
 Headers:
