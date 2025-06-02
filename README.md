@@ -272,8 +272,8 @@ Successful Response (200 OK):
 - **Authentication:**: Bearer__<jwt_token>
 - **Authorization:** Admin
 - **Request Body (Form-data):**
-  image (file): The image file for the brand.
-  name (text): The name of the brand.
+   - image (file): The image file for the brand.
+   - name (text): The name of the brand.
 
 ![addBrand req body](./imgs/addBrand_request_body.png)
   
