@@ -268,23 +268,34 @@ Successful Response (200 OK):
 
 ### 6. Add Brand
 **Endpoint:** `POST /api/v1/auth/addBrand`  
-**Description:** Creates a new brand by uploading an image to Cloudinary and saving the brand details (including image URL, slug, and creator) to the database. Requires an image file and authentication.
+**Description:** Creates a new brand by uploading an image to Cloudinary using multer and saving the brand details (including image URL, slug, and creator) to the database. Requires an image file and authentication.
 - **Authentication:**: Bearer__<jwt_token>
 - **Authorization:** Admin
-Successful Response (200 OK):
-
+- **Request Body (Form-data):**
+  
+Successful Response (201 Created):
 ```json
-[
-  {
-    "id": "prod123",
-    "name": "Product Name",
-    "price": 29.99,
-    "category": "Category Name",
-    "stock": 100
-  },
-  ...
-]
+    {
+    "message": "Created",
+    "result": {
+        "name": "Apple",
+        "image": "https://res.cloudinary.com/ds7wrpkx4/image/upload/v1748867386/brands/pbjvfxvtjn2ipgt93gar.jpg",
+        "public_id": "brands/pbjvfxvtjn2ipgt93gar",
+        "slug": "Apple",
+        "createdBy": "683c4fad80b62da136c98c9d",
+        "_id": "683d993b6414364a2e6f13e4",
+        "createdAt": "2025-06-02T12:29:47.339Z",
+        "updatedAt": "2025-06-02T12:29:47.339Z",
+        "__v": 0
+    }
+}
 ```
+#### 📷addBrand API
+![addBrand API](./imgs/sendCode_req_res.png)
+
+[📬 Click here to open the_add_brand_request](https://www.postman.com/graduation-space-584306/commerceapi/request/oukxpp6/commerceapi?action=share&creator=21090382&ctx=documentation)
+
+
 
 ### 4. Get Categories
 **Endpoint:** `GET /api/categories`
