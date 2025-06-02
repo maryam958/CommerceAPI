@@ -272,6 +272,7 @@ Successful Response (200 OK):
 - **Authentication:**: Bearer__<jwt_token>
 - **Authorization:** Admin
 - **Request Body (Form-data):**
+![addBrand req body](./imgs/addBrand_request_body.png)
   
 Successful Response (201 Created):
 ```json
@@ -291,7 +292,7 @@ Successful Response (201 Created):
 }
 ```
 #### 📷addBrand API
-![addBrand API](./imgs/sendCode_req_res.png)
+![addBrand API](./imgs/addBrans_req_res.png)
 
 [📬 Click here to open the_add_brand_request](https://www.postman.com/graduation-space-584306/commerceapi/request/oukxpp6/commerceapi?action=share&creator=21090382&ctx=documentation)
 
