@@ -268,10 +268,13 @@ Successful Response (200 OK):
 
 ### 6. Add Brand
 **Endpoint:** `POST /api/v1/auth/addBrand`  
-**Description:** Creates a new brand by uploading an image to Cloudinary using multer and saving the brand details (including image URL, slug, and creator) to the database. Requires an image file and authentication.
+**Description:** Creates a new brand by uploading an image to Cloudinary using **Multer** and saving the brand details (including image URL, slug, and creator) to the database. Requires an image file and authentication.
 - **Authentication:**: Bearer__<jwt_token>
 - **Authorization:** Admin
 - **Request Body (Form-data):**
+  image (file): The image file for the brand.
+  name (text): The name of the brand.
+
 ![addBrand req body](./imgs/addBrand_request_body.png)
   
 Successful Response (201 Created):
