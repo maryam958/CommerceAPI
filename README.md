@@ -267,7 +267,7 @@ Successful Response (200 OK):
 
 
 ### 6. Add Brand
-**Endpoint:** `POST /api/v1/auth/addBrand`  
+**Endpoint:** `POST /api/v1/brand/addBrand`  
 **Description:** Creates a new brand by uploading an image to Cloudinary using **Multer** and saving the brand details (including image URL, slug, and creator) to the database. Requires an image file and authentication.
 - **Authentication:**: Bearer__<jwt_token>
 - **Authorization:** Admin
@@ -302,7 +302,7 @@ Successful Response (201 Created):
 
 
 ### 7. Update Brand
-**Endpoint:** `PUT /api/v1/auth/updateBrand`  
+**Endpoint:** `PUT /api/v1/brand/updateBrand`  
 **Description:** Updates a brand's information including its name and image. If a new image is uploaded, the old image is deleted from Cloudinary and replaced with the new one. The brand's name is also converted into a URL-friendly slug if provided.
 - **Authentication:**: Bearer__<jwt_token>
 - **Authorization:** Admin
@@ -337,47 +337,37 @@ Successful Response (200 OK):
 [📬 Click here to open the_update_brand_request](https://www.postman.com/graduation-space-584306/commerceapi/request/iru1do8/commerceapi?action=share&creator=21090382&ctx=documentation)
 
 
-
-### 4. Get Categories
-**Endpoint:** `GET /api/categories`
-**Description:** Retrieve all product categories.
+### 8. Get All Brands
+**Endpoint:** `GET /api/v1/brand/getAllBrands`  
+**Description:** Retrieves a paginated list of all brand entries from the database. This API supports pagination through page and size query parameters.
 - **Authentication:**: Bearer__<jwt_token>
+- **Authorization:** Admin, User
+  
 Successful Response (200 OK):
-
-```json
-[
-  {
-    "id": "cat123",
-    "name": "Category Name"
-  },
-  ...
-]
-```
-
-### 5. Create an Order
-**Endpoint:** `POST /api/orders`
-**Description:** Place a new order with product details.
-- **Authentication:**: Bearer__<jwt_token>
-Request Body (JSON):
-
 ```json
 {
-  "products": [
-    { "productId": "prod123", "quantity": 2 },
-    { "productId": "prod456", "quantity": 1 }
-  ],
-  "shippingAddress": "123 Main St, City, Country"
+    "message": "Done",
+    "allBrands": [
+        {
+            "_id": "683da1adddadfbcacc03354f",
+            "name": "brand name edited",
+            "image": "https://res.cloudinary.com/ds7wrpkx4/image/upload/v1748869548/brands/hvtvrvopudguthm552p4.jpg",
+            "public_id": "brands/hvtvrvopudguthm552p4",
+            "slug": "brand-name-edited",
+            "createdBy": "683c4fad80b62da136c98c9d",
+            "createdAt": "2025-06-02T13:05:49.072Z",
+            "updatedAt": "2025-06-02T13:07:00.009Z",
+            "__v": 0
+        }
+    ]
 }
 ```
-Successful Response (201 Created):
+#### 📷GetAllsBrand API
+![GetAllsBrand API](./imgs/get_all_brand_api.png)
 
-```json
-{
-  "orderId": "order789",
-  "status": "Processing",
-  "totalAmount": 89.97
-}
-```
+[📬 Click here to open the_get_all_brands_request](https://www.postman.com/graduation-space-584306/commerceapi/request/dnsmo9g/commerceapi?action=share&creator=21090382&ctx=documentation)
+
+
 
 ## 📌 Future Improvements
 - Add payment integration
