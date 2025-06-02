@@ -300,6 +300,42 @@ Successful Response (201 Created):
 [📬 Click here to open the_add_brand_request](https://www.postman.com/graduation-space-584306/commerceapi/request/oukxpp6/commerceapi?action=share&creator=21090382&ctx=documentation)
 
 
+### 7. Update Brand
+**Endpoint:** `PUT /api/v1/auth/updateBrand`  
+**Description:** Updates a brand's information including its name and image. If a new image is uploaded, the old image is deleted from Cloudinary and replaced with the new one. The brand's name is also converted into a URL-friendly slug if provided.
+- **Authentication:**: Bearer__<jwt_token>
+- **Authorization:** Admin
+- **Request Body (JSON):**
+```json
+    {
+    "name":"brand name edited"
+    }
+
+```
+  
+Successful Response (200 OK):
+```json
+   {
+    "message": "Updated",
+    "Brand": {
+        "_id": "683da1adddadfbcacc03354f",
+        "name": "brand name edited",
+        "image": "https://res.cloudinary.com/ds7wrpkx4/image/upload/v1748869548/brands/hvtvrvopudguthm552p4.jpg",
+        "public_id": "brands/hvtvrvopudguthm552p4",
+        "slug": "brand-name-edited",
+        "createdBy": "683c4fad80b62da136c98c9d",
+        "createdAt": "2025-06-02T13:05:49.072Z",
+        "updatedAt": "2025-06-02T13:07:00.009Z",
+        "__v": 0
+    }
+}
+```
+#### 📷UpdateBrand API
+![UpdateBrand API](./imgs/addBrans_req_res.png)
+
+[📬 Click here to open the_add_brand_request](https://www.postman.com/graduation-space-584306/commerceapi/request/iru1do8/commerceapi?action=share&creator=21090382&ctx=documentation)
+
+
 
 ### 4. Get Categories
 **Endpoint:** `GET /api/categories`
