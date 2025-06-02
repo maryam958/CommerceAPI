@@ -362,12 +362,50 @@ Successful Response (200 OK):
     ]
 }
 ```
+### Why I Used paginate(page, size)
+✅** Performance Optimization**
+When your database has hundreds or thousands of records (like many brands), it's inefficient to fetch them all at once. It slows down:
+    - Your backend (heavy memory use)
+    - Your frontend (long loading time)
+    - Your user experience (poor UX)
+
+With pagination, you:
+    - Only fetch a small chunk of data
+    - Load results page-by-page, just like Google search or online shops
+
 #### 📷GetAllsBrand API
 ![GetAllsBrand API](./imgs/get_all_brand_api.png)
 
 [📬 Click here to open the_get_all_brands_request](https://www.postman.com/graduation-space-584306/commerceapi/request/dnsmo9g/commerceapi?action=share&creator=21090382&ctx=documentation)
 
+### 9. Get Brand by ID
+**Endpoint:** `GET /api/v1/brand/getBrandById`  
+**Description:** Fetches a single brand document from the database using the brand's unique ID. Returns the brand data if found, otherwise responds with an error indicating the brand was not found.
+- **Authentication:**: Bearer__<jwt_token>
+- **Authorization:** Admin, User
+  
+Successful Response (200 OK):
+```json
+{
+    "message": "Done",
+    "Brand": {
+        "_id": "683da1adddadfbcacc03354f",
+        "name": "brand name edited",
+        "image": "https://res.cloudinary.com/ds7wrpkx4/image/upload/v1748869548/brands/hvtvrvopudguthm552p4.jpg",
+        "public_id": "brands/hvtvrvopudguthm552p4",
+        "slug": "brand-name-edited",
+        "createdBy": "683c4fad80b62da136c98c9d",
+        "createdAt": "2025-06-02T13:05:49.072Z",
+        "updatedAt": "2025-06-02T13:07:00.009Z",
+        "__v": 0
+    }
+}
+```
 
+#### 📷GetBrandByID API
+![GetBrandByID API](./imgs/get_brand_by_id_req_res.png)
+
+[📬 Click here to open the_brand_by_id_request](https://www.postman.com/graduation-space-584306/commerceapi/request/7yaadxo/commerceapi?action=share&creator=21090382&ctx=documentation)
 
 ## 📌 Future Improvements
 - Add payment integration
