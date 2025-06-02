@@ -294,6 +294,7 @@ Successful Response (201 Created):
     }
 }
 ```
+![images_uploaded_to_cloudinar_API](./imgs/images_uploaded_to_cloudinary.png)
 #### 📷addBrand API
 ![addBrand API](./imgs/addBrans_req_res.png)
 
@@ -331,7 +332,7 @@ Successful Response (200 OK):
 }
 ```
 #### 📷UpdateBrand API
-![UpdateBrand API](./imgs/addBrans_req_res.png)
+![UpdateBrand API](./imgs/update_brand_req_res.png)
 
 [📬 Click here to open the_add_brand_request](https://www.postman.com/graduation-space-584306/commerceapi/request/iru1do8/commerceapi?action=share&creator=21090382&ctx=documentation)
 
