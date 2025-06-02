@@ -379,7 +379,7 @@ With pagination, you:
 [📬 Click here to open the_get_all_brands_request](https://www.postman.com/graduation-space-584306/commerceapi/request/dnsmo9g/commerceapi?action=share&creator=21090382&ctx=documentation)
 
 ### 9. Get Brand by ID
-**Endpoint:** `GET /api/v1/brand/getBrandById`  
+**Endpoint:** `GET /api/v1/brand/getBrandById/brandId`  
 **Description:** Fetches a single brand document from the database using the brand's unique ID. Returns the brand data if found, otherwise responds with an error indicating the brand was not found.
 - **Authentication:**: Bearer__<jwt_token>
 - **Authorization:** Admin, User
@@ -406,6 +406,35 @@ Successful Response (200 OK):
 ![GetBrandByID API](./imgs/get_brand_by_id_req_res.png)
 
 [📬 Click here to open the_brand_by_id_request](https://www.postman.com/graduation-space-584306/commerceapi/request/7yaadxo/commerceapi?action=share&creator=21090382&ctx=documentation)
+
+
+### 10. Delete Brand By ID
+**Endpoint:** `DELETE /api/v1/brand/deleteBrandById/brandId`  
+**Description:** Deletes a brand from the database by its ID. This route includes an authorization check to ensure only the user who created the brand (the owner) can delete it. Returns the deleted brand data if successful.
+- **Authentication:**: Bearer__<jwt_token>
+- **Authorization:** Admin, User
+  
+Successful Response (200 OK):
+```json
+{
+    "message": "Done",
+    "deletedBrand": {
+        "acknowledged": true,
+        "deletedCount": 1
+    }
+}
+```
+
+### Before Deletion:
+![Before_deleteion_API](./imgs/brands_before_delete.png)
+
+### After Deletion:
+![After_deleteion_API](./imgs/brands_after_delete.png)
+
+#### 📷DeleteBrandByID API
+![DeleteBrandByID_API](./imgs/delete_brand_req_res.png)
+
+[📬 Click here to open the_delete_brand_by_ID_request](https://www.postman.com/graduation-space-584306/commerceapi/request/fny5w63/commerceapi?action=share&creator=21090382&ctx=documentation)
 
 ## 📌 Future Improvements
 - Add payment integration
