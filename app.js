@@ -19,14 +19,15 @@ app.use(morgan("common"));
 
 app.use(`${baseUrl}/auth`, indexRouter.authRouter);
 app.use(`${baseUrl}/user`, indexRouter.userRouter);
-app.use(`${baseUrl}/product`, indexRouter.productRouter);
 app.use(`${baseUrl}/category`, indexRouter.categoryRouter);
 app.use(`${baseUrl}/subCategory`, indexRouter.subcategoryRouter);
-app.use(`${baseUrl}/reviews`, indexRouter.reviewsRouter);
-app.use(`${baseUrl}/coupon`, indexRouter.couponRouter);
-app.use(`${baseUrl}/cart`, indexRouter.cartRouter);
-app.use(`${baseUrl}/order`, indexRouter.orderRouter);
 app.use(`${baseUrl}/brand`, indexRouter.brandRouter);
+app.use(`${baseUrl}/product`, indexRouter.productRouter);
+app.use(`${baseUrl}/cart`, indexRouter.cartRouter);
+app.use(`${baseUrl}/coupon`, indexRouter.couponRouter);
+app.use(`${baseUrl}/order`, indexRouter.orderRouter);
+app.use(`${baseUrl}/reviews`, indexRouter.reviewsRouter);
+
 
 app.use("*", (req, res, next) => {
   res.send("In-valid Routing Plz check url  or  method");
