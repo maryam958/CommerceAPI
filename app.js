@@ -27,12 +27,6 @@ app.use(`${baseUrl}/cart`, indexRouter.cartRouter);
 app.use(`${baseUrl}/coupon`, indexRouter.couponRouter);
 app.use(`${baseUrl}/order`, indexRouter.orderRouter);
 app.use(`${baseUrl}/reviews`, indexRouter.reviewsRouter);
-
-
-// app.use("*", (req, res, next) => {
-//   res.send("Welcome to Commerce API");
-// });
-
 app.use("*", (req, res, next) => {
   res.send(`
     <!DOCTYPE html>
@@ -42,35 +36,57 @@ app.use("*", (req, res, next) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Commerce API</title>
       <style>
+        * {
+          box-sizing: border-box;
+        }
         body {
-          font-family: Arial, sans-serif;
-          background: #f5f5f5;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
           display: flex;
           justify-content: center;
           align-items: center;
           height: 100vh;
           margin: 0;
         }
-        .container {
+        .card {
           background: white;
-          padding: 30px;
-          border-radius: 12px;
-          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          padding: 40px 30px;
+          border-radius: 16px;
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
           text-align: center;
+          max-width: 500px;
         }
         h1 {
-          color: #4CAF50;
-          margin-bottom: 10px;
+          color: #333;
+          margin-bottom: 20px;
+          font-size: 28px;
         }
         p {
-          color: #333;
+          font-size: 16px;
+          color: #555;
+          margin-bottom: 30px;
+        }
+        .btn {
+          background: #28a745;
+          color: white;
+          text-decoration: none;
+          padding: 12px 24px;
+          border-radius: 8px;
+          font-weight: bold;
+          transition: background 0.3s ease;
+          display: inline-block;
+          margin: 5px;
+        }
+        .btn:hover {
+          background: #1e7e34;
         }
       </style>
     </head>
     <body>
-      <div class="container">
-        <h1>🚀 Welcome to Commerce API</h1>
-        <p>Your API is running smoothly!</p>
+      <div class="card">
+        <h1>🛒 Welcome to the Commerce API</h1>
+        <p>This API handles product management, orders, and users for e-commerce platforms.</p>
+        <a href="https://github.com/maryam958/CommerceAPI" class="btn" target="_blank">📄 View README on GitHub</a>
       </div>
     </body>
     </html>
