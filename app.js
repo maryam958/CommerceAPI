@@ -29,9 +29,54 @@ app.use(`${baseUrl}/order`, indexRouter.orderRouter);
 app.use(`${baseUrl}/reviews`, indexRouter.reviewsRouter);
 
 
+// app.use("*", (req, res, next) => {
+//   res.send("Welcome to Commerce API");
+// });
+
 app.use("*", (req, res, next) => {
-  res.send("In-valid Routing Plz check url  or  method");
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Commerce API</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          background: #f5f5f5;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+        }
+        .container {
+          background: white;
+          padding: 30px;
+          border-radius: 12px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          text-align: center;
+        }
+        h1 {
+          color: #4CAF50;
+          margin-bottom: 10px;
+        }
+        p {
+          color: #333;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>🚀 Welcome to Commerce API</h1>
+        <p>Your API is running smoothly!</p>
+      </div>
+    </body>
+    </html>
+  `);
 });
+
 
 app.use(globalError);
 
